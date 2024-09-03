@@ -1,0 +1,466 @@
+/* Geral */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #787878;
+}
+
+/* Navbar */
+header {
+    background-color: #1B2653;
+    padding: 1rem;
+    color: #fff;
+    position: relative; /* Permite que o menu móvel sobreponha outros elementos */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-right .cadastro {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-right .cadastro:hover {
+    background-color: #FE6613;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FE6613;
+}
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Faz com que as colunas fiquem em uma única coluna */
+        grid-gap: 1rem; /* Ajuste o espaçamento entre os itens */
+    }
+
+    .imovel-guide-content {
+        width: 100%; /* Garante que o conteúdo da grid ocupe toda a largura disponível */
+    }
+
+    .imovel-guide-content img {
+        width: 100%; /* Faz com que a imagem ocupe toda a largura disponível do container */
+    }
+
+    .grid-item {
+        padding: 0.5rem; /* Ajuste o padding para telas menores */
+        border: none; /* Remove a borda para simplificar o layout em telas menores */
+    }
+}
+
+/* Menu Hamburger */
+.menu-toggle {
+    display: none; /* Esconde o menu hamburguer por padrão */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001; /* Garante que o menu esteja acima dos outros elementos */
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+/* Menu Móvel */
+.mobile-nav {
+    display: none;
+    position: fixed; /* Garante que o menu móvel esteja fixo no topo */
+    top: 60px; /* Abaixo do navbar */
+    right: 0;
+    background-color: #1B2653;
+    width: 100%;
+    padding: 5rem;
+    z-index: 1; /* Garante que o menu móvel esteja acima do conteúdo */
+}
+
+.mobile-nav .nav-links {
+    flex-direction: column;
+}
+
+.mobile-nav .nav-links a {
+    padding: 1rem;
+    display: block;
+}
+
+/* Grid Layout */
+.grid-wrapper {
+    padding: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem; /* Ajuste o espaçamento entre os quadrados */
+}
+
+.grid-item {
+    background-color: #fff;
+    color: #1B2653;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+
+/* Info Container para Corretores */
+.info-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Info Container para Corretores */
+.info-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Info Container para Corretores */
+.info-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Info Container para Corretores */
+.info-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* Estilo da imagem do corretor */
+.info-container .corretor-foto {
+    padding: 5px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10%;
+    transition: filter 0.3s ease;
+}
+
+/* Efeito de desfoque na imagem */
+.info-container.blur .corretor-foto {
+    filter: blur(5px);
+}
+
+/* Estilo do botão */
+.ver-telefone {
+    background-color: #FE6613;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ver-telefone:hover {
+    background-color: #e55a00;
+}
+
+/* Mensagem */
+.mensagem {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mensagem input[type="text"],
+.mensagem input[type="number"] {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 90%;
+}
+
+.mensagem #assunto {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 90;
+    height: 100px;
+}
+
+button {
+    background-color: #FE6613;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #e55a00;
+}
+/* Adiciona classe para ocultar resultado inicialmente */
+.resultado-container.hidden {
+    display: none;
+}
+/* Regra de 3 */
+.outra-mensagem {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.regra-3-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.campo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.outra-mensagem input[type="number"] {
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 90%;
+}
+
+.valor3-container {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+
+#valor3-container input[type="number"] {
+    width: calc(30% - 1rem);
+}
+
+.resultado {
+    flex-shrink: 0;
+}
+
+button {
+    background-color: #FE6613;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #e55a00;
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+}
+.imovel-guide-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.imovel-guide-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.imovel-guide-btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #FE6613;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.download-btn {
+    background-color: #FE6613;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1B2653;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-left a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-left: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar-left .nav-links, 
+    .navbar-right {
+        display: none; /* Esconde os itens do navbar quando a largura da tela é menor que 768px */
+    }
+    
+    .menu-toggle {
+        display: flex; /* Mostra o menu hamburguer */
+    }
+    
+    .mobile-nav.show {
+        display: flex; /* Mostra o menu móvel quando a classe 'show' é adicionada */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    
+    .mobile-nav .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+
+/* Ajuste para quando houver zoom */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Esconde o menu hamburguer em telas maiores ou quando não há muito zoom */
+    }
+
+    .logo {
+        display: block; /* Garante que o logo seja sempre mostrado */
+    }
+    
+    .navbar-left .nav-links,
+    .navbar-right {
+        display: flex; /* Garante que o navbar normal apareça em telas maiores */
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(1.1);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+    
+    .grid-item img {
+        animation: zoomIn 2s ease-in-out;
+    }
+}
